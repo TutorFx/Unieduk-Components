@@ -9,23 +9,30 @@
 }
 
 #login {
-  background: linear-gradient(90deg, #002c48 44.92%, #053a5c 100%);
-  @include bp("sm") {
-    background: linear-gradient(
-        90deg,
-        #002c4883 44.92%,
-        rgba(32, 68, 122, 0.495) 100%
-      ),
-      url(../assets/images/background-login-sm.jpg);
-  }
-  @include bp("lg") {
-    background: url(../assets/images/background-login.png);
-  }
-
-  width: 100%;
-  min-height: 100vh;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;
+  background-image: linear-gradient(90deg, #002c48 44.92%, #053a5c 100%);
+  @include bp("sm") {
+    background-image: linear-gradient(
+        90deg,
+        #002c48 44.92%,
+        rgba(32, 68, 122, 0.495) 100%
+      ),
+      url(../assets/images/login-bg-sm.png);
+  }
+  @include bp("lg") {
+    background-image: linear-gradient(
+      90deg,
+      #002c48 44.92%,
+      rgba(32, 68, 122, 0.495) 100%
+    ),url(../assets/images/login-bg.png);
+  }
+  @include bp("xl") {
+    background-size: cover;
+  }
+  width: 100%;
+  min-height: 100vh;
 
   color: white;
 
@@ -82,7 +89,7 @@
             pointer-events: none;
 
             bottom: 5px;
-            font-family: 'Inter', sans-serif;
+            font-family: "Inter", sans-serif;
             font-style: normal;
             font-weight: 300;
             font-size: 14px;
@@ -119,7 +126,7 @@
         cursor: grab;
         user-select: none;
 
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
         font-size: 16px;
         font-weight: 600;
         line-height: 22px;
@@ -133,7 +140,7 @@
 
       h1 {
         width: 100%;
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
         font-size: 48px;
         font-weight: 600;
         text-align: left;
@@ -143,7 +150,7 @@
         }
       }
       h4 {
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 22px;
@@ -157,7 +164,7 @@
       }
       .subtext {
         width: 100%;
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
         font-size: 16px;
         font-weight: 600;
         line-height: 22px;

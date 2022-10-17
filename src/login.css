@@ -22,21 +22,27 @@
 }
 
 #login {
-  background: linear-gradient(90deg, #002c48 44.92%, #053a5c 100%);
-  width: 100%;
-  min-height: 100vh;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;
+  background-image: linear-gradient(90deg, #002c48 44.92%, #053a5c 100%);
+  width: 100%;
+  min-height: 100vh;
   color: white;
 }
 @media (min-width: 540px) {
   #login {
-    background: linear-gradient(90deg, rgba(0, 44, 72, 0.5137254902) 44.92%, rgba(32, 68, 122, 0.495) 100%), url(../assets/images/background-login-sm.jpg);
+    background-image: linear-gradient(90deg, #002c48 44.92%, rgba(32, 68, 122, 0.495) 100%), url(../assets/images/login-bg-sm.png);
   }
 }
 @media (min-width: 960px) {
   #login {
-    background: url(../assets/images/background-login.png);
+    background-image: linear-gradient(90deg, #002c48 44.92%, rgba(32, 68, 122, 0.495) 100%), url(../assets/images/login-bg.png);
+  }
+}
+@media (min-width: 1140px) {
+  #login {
+    background-size: cover;
   }
 }
 #login .faj-container {
