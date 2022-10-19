@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Layout</title>
-    <link rel="stylesheet" href="../src/styles.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <main>
-      <div id="comercial" class="comercial">
-        <div tabindex="0" class="faj-select">
-          Mude para a unidade IEJI
-        </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Layout</title>
+  <link rel="stylesheet" href="../src/styles.css">
+  <link rel="stylesheet" href="../src/selector.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="../src/components/select.js"></script>
+  <main>
+    <div id="comercial" class="comercial">
+      <div id="app">
+        <faj-select titulo="seletor" :inputs="inputs" @conteudo="(e) => selector = e"></faj-select>
+        {{selector}}
       </div>
-    </main>
-  </body>
+    </div>
+  </main>
+  <script>
+    const { createApp } = Vue
+
+    createApp({
+      components: {
+        "faj-select": fajSelect
+      },
+      data: () => ({
+        inputs: [{ text: 'teste1', value: 'tedwast' }, { text: 'teste2', value: 'tedwadst' }, { text: 'teste3', value: 'tadest' }],
+        selector: {}
+      })
+    }).mount('#app')
+
+    //app.component("fajSelect", fajSelect); // global registration - can be used anywhere
+    //app.mount("#app");
+  </script>
+</body>
+
 </html>
