@@ -5,6 +5,9 @@
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   /* Primary/White */
   background: #ffffff;
   /* Secondary/Gray 2 */
@@ -24,6 +27,7 @@
   background: #ffffff;
   border: 1px solid #e0e2e7;
   border-radius: 8px;
+  z-index: 2;
   display: none;
   position: absolute;
   top: calc(100% + 10px);
