@@ -1,10 +1,14 @@
+body {
+  background-color: #E0E2E7;
+  min-height: 100vh;
+}
+
 #app {
   padding: 2rem;
-  background-color: #E0E2E7;
 }
 
 .breadcrumb {
-  font-family: Montserrat;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -30,7 +34,7 @@
   border-radius: 8px;
   padding: 0.25rem 1rem;
   background-color: var(--color-secondary);
-  font-family: Roboto;
+  font-family: Montserrat, sans-serif;
   font-size: 14px;
   font-weight: 700;
   text-align: center;
@@ -42,6 +46,7 @@
 .tabs {
   display: flex;
   width: 100%;
+  margin-bottom: 1rem;
 }
 .tabs .tab {
   width: 33.3%;
@@ -60,7 +65,58 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.tabs .tab.selected {
+.tabs .tab.selected, .tabs .tab:hover {
   color: var(--color-white);
   background-color: var(--color-secondary);
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+}
+.cards .card {
+  width: 33.3%;
+  padding: 0.75rem;
+  background-color: #fff;
+  border-radius: 8px;
+  aspect-ratio: 2/0.8;
+  gap: 1rem;
+  margin-top: auto;
+}
+.cards .card .value {
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
+  display: flex;
+  align-items: flex-end;
+}
+.cards .card .top-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.cards .card .top-bar:first-child {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.cards .card .top-bar:last-child {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
 }/*# sourceMappingURL=comercial.css.map */
