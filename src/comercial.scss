@@ -1,3 +1,5 @@
+@import "../src/global";
+
 body {
   background-color: #e0e2e7;
   min-height: 100vh;
@@ -85,15 +87,23 @@ body {
 
 .cards {
   display: flex;
+  flex-flow: row wrap;
+  @include bp("md") {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
   margin-bottom: 1rem;
   gap: 1rem;
   .card {
-    width: 33.3%;
     padding: 2rem;
     background-color: #fff;
     border-radius: 8px;
     aspect-ratio: 2/0.1;
 
+    @include bp("md") {
+      width: inherit;
+    }
+    width: 100%;
     gap: 1rem;
     margin-top: auto;
 
@@ -104,6 +114,7 @@ body {
         font-weight: 700;
         letter-spacing: 0em;
         width: auto;
+        max-width: 200px;
         max-height: fill-available;
       }
     }
@@ -111,7 +122,10 @@ body {
     .top-bar {
       display: flex;
       justify-content: space-between;
+      flex-flow: row wrap;
+      gap: .5rem;
       width: 100%;
+      margin-bottom: 2rem;
 
       &:first-child {
         //styleName: Body text - Bold;
@@ -141,7 +155,6 @@ body {
   background: #ffffff;
   border-radius: 8px;
   .disabled-color {
-
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;

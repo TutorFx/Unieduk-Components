@@ -18,6 +18,7 @@
 <body>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="../src/components/select.js"></script>
+  <script src="../src/components/tabela.js"></script>
   <main>
     <div id="comercial" class="comercial">
       <div id="app">
@@ -85,9 +86,7 @@
             <a href="#card-table">Add Option</a>
           </div>
           <div class="disabled-color">Quantidade de novos alunos estimada para 2023-01</div>
-          <div class="table">
-            
-          </div>
+          <faj-tabela  />
         </div>
       </div>
     </div>
@@ -97,7 +96,8 @@
 
     createApp({
       components: {
-        "faj-select": fajSelect
+        "faj-select": fajSelect,
+        "faj-tabela": tabela
       },
       data: () => ({
         inputs: [{ text: 'teste1', value: 'tedwast' }, { text: 'teste2', value: 'tedwadst' }, { text: 'teste3', value: 'tadest' }],
