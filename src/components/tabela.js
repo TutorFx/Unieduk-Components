@@ -17,7 +17,7 @@ switcher = {
 };
 cell = {
   template: /* html */ `
-  <div @click="++this.$refs.switcher.status" class="cell">
+  <div ${/* @click="++this.$refs.switcher.status" */''} class="cell">
     <div>{{row}}</div><switcher ref="switcher" />
   </div>
   `,
@@ -32,14 +32,18 @@ const tabela = {
   template: /*html*/ `
   <div class="tabela">
     <table>
-      <tr class="header">
-        <th v-for="row in tabelanomes">
-          <cell :row="row" />
-        </th>
-      </tr>
-      <tr v-for="col in defaultabela">
-        <td v-for="row in tabelanomes">{{col[row]}}</td>
-      </tr>
+      <thead>
+        <tr class="header">
+          <th class="titleColumn" v-for="(i, row) in tabelanomes">
+            <cell :row="row" />
+          </th>
+        </tr>
+      </thead>
+      <tbody class="tableBody">
+        <tr v-for="col in tabelaFiltered">
+          <td v-for="(i, row) in tabelanomes">{{col[row]}}</td>
+        </tr>
+      </tbody>
     </table>
   </div>
   `,
@@ -55,37 +59,56 @@ const tabela = {
   data: () => ({
     id: null,
     search: "",
-    tabelanomes: ["curso", "Evasão + Formados","Realista", "Otimista"],
+    tabelanomes: {"curso": String, "Evasão + Formados": Number,"Realista": Number, "Otimista": Number},
     defaultabela: [
       {
-        curso: "Alfreds Futterkiste",
+        curso: "zAlfreds Futterkiste",
         "Evasão + Formados": 10,
-        "Realista": 15,
+        "Realista": 1,
         "Otimista": 20
       },
       {
         curso: "Berglunds snabbkop",
         "Evasão + Formados": 10,
-        "Realista": 15,
+        "Realista": 5,
         "Otimista": 20
       },
       {
         curso: "Island Trading",
         "Evasão + Formados": 10,
-        "Realista": 15,
+        "Realista": 152,
         "Otimista": 20
       },
       {
         curso: "Koniglich Essen",
         "Evasão + Formados": 10,
-        "Realista": 15,
+        "Realista": 1,
         "Otimista": 20
       },
     ],
+    sortBy: null
   }),
   components: {
     cell,
   },
-  computed: {},
-  mounted() {},
+  computed: {
+    tabelaFiltered(){
+      const sortby = this.sortBy
+      if(!sortby) return this.defaultabela;
+      //this.tabelanomes[sortby] = typeof
+      if(this.tabelanomes[sortby] == Number) return _.orderBy(this.defaultabela, [sortby], ['asc']);
+      else if (this.tabelanomes[sortby] == String) return this.defaultabela.sort((a, b) => a[sortby] > b[sortby] ? 1 : -1);
+      else return this.defaultabela;
+    }
+  },
+  mounted() {
+    // ordena dado um criterio
+
+    var columns = document.querySelectorAll('.titleColumn');
+
+    columns.forEach(c => c.addEventListener("click", (event) => {
+        var columnTitle = event.target.textContent;
+        this.sortBy = columnTitle
+    }))
+  }
 };
