@@ -9,3 +9,6 @@ e depois:
 ```
 npm run dev (ou yarn dev)
 ```
+
+Estrutura:
+
