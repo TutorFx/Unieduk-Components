@@ -1,5 +1,7 @@
 ***Component Lib Unieduk 0.1 Pre-Alpha***
 
+![Alt text](./src/assets/logo.svg)
+
 Para executar o servidor de desenvolvimento siga os seguintes passos no terminal em caminho relativo à pasta do projeto:
 
 ```
