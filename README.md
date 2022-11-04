@@ -11,7 +11,7 @@ npm run dev (ou yarn dev)
 ```
 
 Estrutura:
-
+```
 📦src
  ┣ 📂assets
  ┃ ┣ 📂images
@@ -42,3 +42,4 @@ Estrutura:
  ┃ ┣ 📜styles.scss
  ┃ ┣ 📜tabela.scss
  ┃ ┗ 📜_global.scss
+ ```
