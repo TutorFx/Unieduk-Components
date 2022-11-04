@@ -1,0 +1,17 @@
+.faj-select-nav-container{
+    .faj-select-nav:has(input[type="radio"]:checked){
+        .modded{
+            background-color: red;
+        }
+    }
+    .faj-select-nav{
+        display: flex;
+        input{
+            position: absolute;
+            opacity: 0;
+        }
+        .modded{
+            padding: 1rem;
+        }
+    }
+}

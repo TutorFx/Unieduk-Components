@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Comercial</title>
-  <link rel="stylesheet" href="../src/styles.css">
-  <link rel="stylesheet" href="../src/comercial.css">
-  <link rel="stylesheet" href="../src/selector.css">
-  <link rel="stylesheet" href="../src/tabela.css">
+  <link rel="stylesheet" href="../src/css/styles.css">
+  <link rel="stylesheet" href="../src/css/comercial.css">
+  <link rel="stylesheet" href="../src/css/selector.css">
+  <link rel="stylesheet" href="../src/css/tabela.css">
+  <link rel="stylesheet" href="../src/css/selectnav.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
@@ -20,6 +21,7 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
   <script src="../src/components/select.js"></script>
+  <script src="../src/components/selectNav.js"></script>
   <script src="../src/components/tabela.js"></script>
   <main>
     <div id="comercial" class="comercial">
@@ -82,15 +84,15 @@
             </div>
           </div>
         </div>
+
         <div class="card--table">
           <div class="top-bar">
             <span>META EAD - GRADUAÇÃO</span>
             <a href="#card-table">Add Option</a>
           </div>
           <div class="disabled-color">Quantidade de novos alunos estimada para 2023-01</div>
-          <faj-tabela
-          sort-by="songs"
-          sort-order="asc" />
+          <faj-selectnav></faj-selectnav>
+          <faj-tabela></faj-tabela>
         </div>
       </div>
     </div>
@@ -101,7 +103,8 @@
     createApp({
       components: {
         "faj-select": fajSelect,
-        "faj-tabela": tabela
+        "faj-tabela": tabela,
+        "faj-selectnav": fajSelectNav,
       },
       data: () => ({
         inputs: [{ text: 'teste1', value: 'tedwast' }, { text: 'teste2', value: 'tedwadst' }, { text: 'teste3', value: 'tadest' }],

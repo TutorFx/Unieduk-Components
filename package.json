@@ -1,6 +1,6 @@
 {
   "scripts":{
-    "watch": "node-sass --watch scss src/ src/"
+    "watch": "node-sass --watch scss src/css src/scss"
   },
   "dependencies": {
     "node-sass": "^7.0.3"
