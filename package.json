@@ -1,7 +1,7 @@
 {
   "scripts": {
     "watch-css": "node-sass -rw src/scss/ -o src/css/",
-    "watch-html": "http-server",
+    "watch-html": "live-server",
     "dev": "concurrently --kill-others \"npm run watch-css\" \"npm run watch-html\""
   },
   "dependencies": {

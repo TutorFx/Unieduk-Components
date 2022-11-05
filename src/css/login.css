@@ -14,12 +14,10 @@
   --color-gray-3: #828282;
   --color-gray-4: #bdbdbd;
   --color-gray-5: #e0e0e0;
-  --color-gray-6: #f5f5f4;
-}
+  --color-gray-6: #f5f5f4; }
 
 .faj-login-container {
-  min-height: 100vh;
-}
+  min-height: 100vh; }
 
 #login {
   background-size: cover;
@@ -28,159 +26,124 @@
   background-image: linear-gradient(90deg, #002c48 44.92%, #053a5c 100%);
   width: 100%;
   min-height: 100vh;
-  color: white;
-}
-@media (min-width: 540px) {
-  #login {
-    background-image: linear-gradient(90deg, #002c48 44.92%, rgba(32, 68, 122, 0.495) 100%), url(../assets/images/login-bg-sm.png);
-  }
-}
-@media (min-width: 960px) {
-  #login {
-    background-image: linear-gradient(90deg, #002c48 44.92%, rgba(32, 68, 122, 0.495) 100%), url(../assets/images/login-bg.png);
-  }
-}
-@media (min-width: 1140px) {
-  #login {
-    background-size: cover;
-  }
-}
-#login .faj-container {
-  display: flex;
-  align-items: center;
-}
-#login .faj-container .faj-login {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  height: 100%;
-}
-#login .faj-container .faj-login img {
-  height: 43px;
-  width: 42px;
-  margin-bottom: 2rem;
-}
-#login .faj-container .faj-login form {
-  width: 100%;
-  max-width: 440px;
-}
-#login .faj-container .faj-login form .login,
-#login .faj-container .faj-login form .password {
-  margin-bottom: 0.75rem;
-  padding: 0.5rem;
-  padding-bottom: 0;
-  border: 1px solid rgba(0, 0, 0, 0);
-  background-color: #022840;
-  height: 46px;
-  width: 100%;
-  max-width: calc(100% - 1rem);
-  border-radius: 4px;
-}
-#login .faj-container .faj-login form .login:focus-within,
-#login .faj-container .faj-login form .password:focus-within {
-  border: 1px solid #ffc629;
-  box-shadow: 0px 0px 20px rgba(106, 100, 173, 0.3);
-}
-#login .faj-container .faj-login form .login:focus-within label,
-#login .faj-container .faj-login form .password:focus-within label {
-  font-size: 8px;
-}
-#login .faj-container .faj-login form .login input::-moz-placeholder, #login .faj-container .faj-login form .password input::-moz-placeholder {
-  opacity: 0;
-}
-#login .faj-container .faj-login form .login input:-ms-input-placeholder, #login .faj-container .faj-login form .password input:-ms-input-placeholder {
-  opacity: 0;
-}
-#login .faj-container .faj-login form .login input::placeholder,
-#login .faj-container .faj-login form .password input::placeholder {
-  opacity: 0;
-}
-#login .faj-container .faj-login form .login label,
-#login .faj-container .faj-login form .password label {
-  transition: all 0.3s;
-  position: relative;
-  bottom: 0;
-  pointer-events: none;
-  bottom: 5px;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 12px;
-  /* identical to box height */
-  color: rgba(255, 255, 255, 0.5);
-}
-#login .faj-container .faj-login form .login input,
-#login .faj-container .faj-login form .password input {
-  transition: all 0.3s;
-  color: white;
-  width: 100%;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  position: relative;
-}
-#login .faj-container .faj-login form .login input:focus,
-#login .faj-container .faj-login form .password input:focus {
-  font-size: 19px;
-  top: -5px;
-}
-#login .faj-container .faj-login .button {
-  background: #ffc629;
-  border-radius: 8px;
-  height: 46px;
-  width: 100%;
-  margin-top: 2rem;
-  border: none;
-  cursor: -webkit-grab;
-  cursor: grab;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 22px;
-  letter-spacing: 0em;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#login .faj-container .faj-login h1 {
-  width: 100%;
-  font-family: "Inter", sans-serif;
-  font-size: 48px;
-  font-weight: 600;
-  text-align: left;
-  word-break: break-word;
-}
-@media screen and (max-width: 720px) {
-  #login .faj-container .faj-login h1 {
-    font-size: 2em;
-  }
-}
-#login .faj-container .faj-login h4 {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0.03em;
-  text-align: left;
-  color: rgba(255, 255, 255, 0.7);
-}
-#login .faj-container .faj-login h4 span {
-  color: #e0b401;
-}
-#login .faj-container .faj-login .subtext {
-  width: 100%;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 22px;
-  letter-spacing: 0.03em;
-  text-align: left;
-  line-height: 16px;
-}
+  color: white; }
+  @media (min-width: 540px) {
+    #login {
+      background-image: linear-gradient(90deg, #002c48 44.92%, rgba(32, 68, 122, 0.495) 100%), url(../assets/images/login-bg-sm.png); } }
+  @media (min-width: 960px) {
+    #login {
+      background-image: linear-gradient(90deg, #002c48 44.92%, rgba(32, 68, 122, 0.495) 100%), url(../assets/images/login-bg.png); } }
+  @media (min-width: 1140px) {
+    #login {
+      background-size: cover; } }
+  #login .faj-container {
+    display: flex;
+    align-items: center; }
+    #login .faj-container .faj-login {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      height: 100%; }
+      #login .faj-container .faj-login img {
+        height: 43px;
+        width: 42px;
+        margin-bottom: 2rem; }
+      #login .faj-container .faj-login form {
+        width: 100%;
+        max-width: 440px; }
+        #login .faj-container .faj-login form .login,
+        #login .faj-container .faj-login form .password {
+          margin-bottom: 0.75rem;
+          padding: 0.5rem;
+          padding-bottom: 0;
+          border: 1px solid #00000000;
+          background-color: #022840;
+          height: 46px;
+          width: 100%;
+          max-width: calc(100% - 1rem);
+          border-radius: 4px; }
+          #login .faj-container .faj-login form .login:focus-within,
+          #login .faj-container .faj-login form .password:focus-within {
+            border: 1px solid #ffc629;
+            box-shadow: 0px 0px 20px rgba(106, 100, 173, 0.3); }
+            #login .faj-container .faj-login form .login:focus-within label,
+            #login .faj-container .faj-login form .password:focus-within label {
+              font-size: 8px; }
+          #login .faj-container .faj-login form .login input::placeholder,
+          #login .faj-container .faj-login form .password input::placeholder {
+            opacity: 0; }
+          #login .faj-container .faj-login form .login label,
+          #login .faj-container .faj-login form .password label {
+            transition: all 0.3s;
+            position: relative;
+            bottom: 0;
+            pointer-events: none;
+            bottom: 5px;
+            font-family: "Inter", sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 12px;
+            /* identical to box height */
+            color: rgba(255, 255, 255, 0.5); }
+          #login .faj-container .faj-login form .login input,
+          #login .faj-container .faj-login form .password input {
+            transition: all 0.3s;
+            color: white;
+            width: 100%;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            position: relative; }
+            #login .faj-container .faj-login form .login input:focus,
+            #login .faj-container .faj-login form .password input:focus {
+              font-size: 19px;
+              top: -5px; }
+      #login .faj-container .faj-login .button {
+        background: #ffc629;
+        border-radius: 8px;
+        height: 46px;
+        width: 100%;
+        margin-top: 2rem;
+        border: none;
+        cursor: grab;
+        user-select: none;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      #login .faj-container .faj-login h1 {
+        width: 100%;
+        font-family: "Inter", sans-serif;
+        font-size: 48px;
+        font-weight: 600;
+        text-align: left;
+        word-break: break-word; }
+        @media screen and (max-width: 720px) {
+          #login .faj-container .faj-login h1 {
+            font-size: 2em; } }
+      #login .faj-container .faj-login h4 {
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.03em;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.7); }
+        #login .faj-container .faj-login h4 span {
+          color: #e0b401; }
+      #login .faj-container .faj-login .subtext {
+        width: 100%;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0.03em;
+        text-align: left;
+        line-height: 16px; }

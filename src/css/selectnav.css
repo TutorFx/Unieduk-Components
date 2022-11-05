@@ -1,13 +1,12 @@
-.faj-select-nav-container .faj-select-nav:has(input[type=radio]:checked) .modded {
-  background-color: red;
-}
-.faj-select-nav-container .faj-select-nav {
+.faj-select-nav-container {
   display: flex;
-}
-.faj-select-nav-container .faj-select-nav input {
-  position: absolute;
-  opacity: 0;
-}
-.faj-select-nav-container .faj-select-nav .modded {
-  padding: 1rem;
-}
+  margin: 1rem 0rem 1rem; }
+  .faj-select-nav-container .faj-select-nav:has(input[type="radio"]:checked) .modded {
+    border-bottom: 2px solid #2E65F3;
+    color: #2E65F3; }
+  .faj-select-nav-container .faj-select-nav input {
+    position: absolute;
+    opacity: 0; }
+  .faj-select-nav-container .faj-select-nav .modded {
+    padding: 1rem;
+    border-bottom: 2px solid transparent; }
