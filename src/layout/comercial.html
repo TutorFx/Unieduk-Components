@@ -91,7 +91,8 @@
             <a href="#card-table">Add Option</a>
           </div>
           <div class="disabled-color">Quantidade de novos alunos estimada para 2023-01</div>
-          <faj-selectnav></faj-selectnav>
+          <faj-selectnav :options="optionsNavOne" @selected="(e) => selectNav = e"></faj-selectnav>
+          {{selectNav}}
           <faj-tabela></faj-tabela>
         </div>
       </div>
@@ -110,6 +111,8 @@
         inputs: [{ text: 'teste1', value: 'tedwast' }, { text: 'teste2', value: 'tedwadst' }, { text: 'teste3', value: 'tadest' }],
         selector: {},
         radio: null,
+        selectNav: 'teste1',
+        optionsNavOne: ['teste1', 'teste2', 'teste4']
       })
     }).mount('#app')
 
