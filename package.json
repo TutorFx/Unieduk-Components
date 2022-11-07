@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "html-minifier": "^4.0.0",
+    "live-server": "^1.2.2",
     "node-sass": "^7.0.3",
     "sass": "^1.56.0"
   },
