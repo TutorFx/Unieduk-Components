@@ -1,32 +1,33 @@
+.tabelas .tabela:not(:last-child) {
+  margin-bottom: 1rem; }
+
 .tabela {
   overflow: hidden;
   border: 1px solid #ddd;
-  border-radius: 16px;
-}
-.tabela table {
-  font-family: Inter;
-  font-size: 12px;
-  font-weight: 500;
-  border-collapse: collapse;
-  width: 100%;
-  font-size: 18px;
-}
-.tabela table th,
-.tabela table td {
-  text-align: left;
-  padding: 20px 12px 20px 12px;
-}
-.tabela table tr {
-  border-bottom: 1px solid #ddd;
-}
-.tabela table tr.header, .tabela table tr:hover {
-  background: #f9f9f9;
-}
-.tabela table tr.header {
-  text-transform: uppercase;
-}
-.tabela table tr.header th .cell {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  border-radius: 16px; }
+  .tabela table {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 18px; }
+    .tabela table .tableBody tr:last-child {
+      border-radius: 16px; }
+    .tabela table .tableAdd tr:first-child {
+      margin-top: 5px; }
+    .tabela table :not(.tableAdd) th,
+    .tabela table :not(.tableAdd) td {
+      text-align: left;
+      padding: 20px 12px 20px 12px; }
+    .tabela table :not(.tableAdd) tr {
+      border-bottom: 1px solid #ddd; }
+      .tabela table :not(.tableAdd) tr.header, .tabela table :not(.tableAdd) tr:hover {
+        background: #f9f9f9; }
+      .tabela table :not(.tableAdd) tr.header {
+        text-transform: uppercase; }
+        .tabela table :not(.tableAdd) tr.header th .cell {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }

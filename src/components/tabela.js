@@ -17,7 +17,7 @@ switcher = {
 };
 cell = {
   template: /* html */ `
-  <div ${/* @click="++this.$refs.switcher.status" */''} class="cell">
+  <div ${/* @click="++this.$refs.switcher.status" */ ""} class="cell">
     <div>{{row}}</div><switcher ref="switcher" />
   </div>
   `,
@@ -26,25 +26,36 @@ cell = {
   },
   props: {
     row: String,
-  }
+  },
 };
 const tabela = {
   template: /*html*/ `
-  <div class="tabela">
-    <table>
-      <thead>
-        <tr class="header">
-          <th class="titleColumn" v-for="(i, row) in tabelanomes">
-            <cell :row="row" />
-          </th>
-        </tr>
-      </thead>
-      <tbody class="tableBody">
-        <tr v-for="col in tabelaFiltered">
-          <td v-for="(i, row) in tabelanomes">{{col[row]}}</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="tabelas">
+    <div class="tabela">
+      <table>
+        <thead>
+          <tr class="header">
+            <th class="titleColumn" v-for="(i, row) in tabelanomes">
+              <cell :row="row" />
+            </th>
+          </tr>
+        </thead>
+        <tbody class="tableBody">
+          <tr v-for="col in tabelaFiltered">
+            <td v-for="(i, row) in tabelanomes">{{col[row]}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tabela">
+      <table>
+        <tbody class="tableAdd">
+          <tr>
+            <td v-for="(i, row) in tabelanomes">{{tabelanomes[row] == Number ? tabelaFiltered?.map(item => item[row])?.reduce((prev, curr) => prev + curr, 0) : 'Total'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   `,
   props: {
@@ -55,60 +66,47 @@ const tabela = {
       type: Array,
       defaultValue: [],
     },
+    table: {
+      type: Array,
+      defaultValue: [],
+    },
   },
   data: () => ({
     id: null,
     search: "",
-    tabelanomes: {"curso": String, "Evasão + Formados": Number,"Realista": Number, "Otimista": Number},
-    defaultabela: [
-      {
-        curso: "zAlfreds Futterkiste",
-        "Evasão + Formados": 10,
-        "Realista": 1,
-        "Otimista": 20
-      },
-      {
-        curso: "Berglunds snabbkop",
-        "Evasão + Formados": 10,
-        "Realista": 5,
-        "Otimista": 20
-      },
-      {
-        curso: "Island Trading",
-        "Evasão + Formados": 10,
-        "Realista": 152,
-        "Otimista": 20
-      },
-      {
-        curso: "Koniglich Essen",
-        "Evasão + Formados": 10,
-        "Realista": 1,
-        "Otimista": 20
-      },
-    ],
-    sortBy: null
+    tabelanomes: {
+      curso: String,
+      "Evasão + Formados": Number,
+      Realista: Number,
+      Otimista: Number,
+    },
+    sortBy: null,
   }),
   components: {
     cell,
   },
   computed: {
-    tabelaFiltered(){
-      const sortby = this.sortBy
-      if(!sortby) return this.defaultabela;
+    tabelaFiltered() {
+      const sortby = this.sortBy;
+      if (!sortby) return this.table;
       //this.tabelanomes[sortby] = typeof
-      if(this.tabelanomes[sortby] == Number) return _.orderBy(this.defaultabela, [sortby], ['asc']);
-      else if (this.tabelanomes[sortby] == String) return this.defaultabela.sort((a, b) => a[sortby] > b[sortby] ? 1 : -1);
-      else return this.defaultabela;
-    }
+      if (this.tabelanomes[sortby] == Number)
+        return _.orderBy(this.table, [sortby], ["asc"]);
+      else if (this.tabelanomes[sortby] == String)
+        return this.table.sort((a, b) => (a[sortby] > b[sortby] ? 1 : -1));
+      else return this.table;
+    },
   },
   mounted() {
     // ordena dado um criterio
 
-    var columns = document.querySelectorAll('.titleColumn');
+    var columns = document.querySelectorAll(".titleColumn");
 
-    columns.forEach(c => c.addEventListener("click", (event) => {
+    columns.forEach((c) =>
+      c.addEventListener("click", (event) => {
         var columnTitle = event.target.textContent;
-        this.sortBy = columnTitle
-    }))
-  }
+        this.sortBy = columnTitle;
+      })
+    );
+  },
 };

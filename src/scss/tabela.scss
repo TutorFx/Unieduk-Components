@@ -1,3 +1,8 @@
+.tabelas{
+  .tabela:not(:last-child){
+    margin-bottom: 1rem;
+  }
+}
 .tabela {
   overflow: hidden;
   border: 1px solid #ddd;
@@ -7,31 +12,48 @@
     font-size: 12px;
     font-weight: 500;
 
+    table-layout: fixed;
+
     border-collapse: collapse;
     width: 100%;
     font-size: 18px;
-    
-
-    th,
-    td {
-      text-align: left;
-      padding: 20px 12px 20px 12px;
-    }
-
-    tr {
-      border-bottom: 1px solid #ddd;
-      &.header,
-      &:hover {
-        background: #f9f9f9;
+    .tableBody{
+      tr{
+        &:last-child{
+          border-radius: 16px;
+        }
       }
-      &.header {
-        text-transform: uppercase;
-        th {
-          .cell {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            svg {
+    }
+    .tableAdd{
+      tr{
+        &:first-child{
+          //border-top: 5px solid #ddd;
+          margin-top: 5px;
+        }
+      }
+    }
+    :not(.tableAdd) {
+      th,
+      td {
+        text-align: left;
+        padding: 20px 12px 20px 12px;
+      }
+
+      tr {
+        border-bottom: 1px solid #ddd;
+        &.header,
+        &:hover {
+          background: #f9f9f9;
+        }
+        &.header {
+          text-transform: uppercase;
+          th {
+            .cell {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              svg {
+              }
             }
           }
         }
