@@ -12,11 +12,67 @@
   grid-area: logo; }
 
 .user {
-  grid-area: user; }
+  grid-area: user;
+  padding-right: 20px;
+  display: grid;
+  grid-template-columns: 1fr 48px;
+  gap: 1rem;
+  align-items: center; }
+  .user:focus, .user:hover {
+    outline: none;
+    background-color: #012d49e7; }
+  .user .data {
+    text-align: right; }
+    .user .data h4 {
+      font-family: Inter;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: -0.01em; }
+    .user .data p {
+      font-family: Inter;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 12px;
+      letter-spacing: -0.01em;
+      color: #979797; }
+  .user .avatar {
+    background: #FFD88D;
+    border-radius: 48px;
+    height: 48px;
+    width: 48px; }
 
 header {
   background: #707070;
-  grid-area: header; }
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  padding: 0 15px; }
+  header #Search-field {
+    position: relative;
+    background-color: white;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 24px;
+    border: 1px solid #024872;
+    background: #012235;
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 680px;
+    width: 100%;
+    padding: .5rem .75rem; }
+    header #Search-field:has(:focus-within) {
+      border: 1px solid #E0B400; }
+    header #Search-field svg {
+      cursor: pointer; }
+    header #Search-field input[type="text"] {
+      border: none;
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+      color: white; }
+      header #Search-field input[type="text"]:focus {
+        outline: none; }
 
 nav {
   background: #C9BFBF;
@@ -87,6 +143,5 @@ footer {
   justify-content: center; }
 
 header, nav, aside, footer, .logo, .user {
-  padding: 0;
   background: #012E49;
   color: #FFFFFF; }
