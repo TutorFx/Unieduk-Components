@@ -17,27 +17,32 @@ Estrutura:
 📦src
  ┣ 📂assets
  ┃ ┣ 📂images
+ ┃ ┃ ┣ 📜avatar.png
  ┃ ┃ ┣ 📜login-bg-sm.png
  ┃ ┃ ┗ 📜login-bg.png
  ┃ ┣ 📜logo-simp.svg
- ┃ ┗ 📜logo.svg
+ ┃ ┣ 📜logo.svg
+ ┃ ┗ 📜menu.js
  ┣ 📂components
  ┃ ┣ 📜select.js
  ┃ ┣ 📜selectNav.js
  ┃ ┗ 📜tabela.js
  ┣ 📂css
  ┃ ┣ 📜comercial.css
+ ┃ ┣ 📜layout.css
  ┃ ┣ 📜login.css
  ┃ ┣ 📜selectnav.css
  ┃ ┣ 📜selector.css
  ┃ ┣ 📜styles.css
  ┃ ┗ 📜tabela.css
- ┣ 📂layout
+ ┣ 📂layout (HTML)
  ┃ ┣ 📜comercial.html
+ ┃ ┣ 📜layout.html
  ┃ ┣ 📜login.html
  ┃ ┗ 📜selector.html
  ┗ 📂scss
  ┃ ┣ 📜comercial.scss
+ ┃ ┣ 📜layout.scss
  ┃ ┣ 📜login.scss
  ┃ ┣ 📜selectnav.scss
  ┃ ┣ 📜selector.scss
