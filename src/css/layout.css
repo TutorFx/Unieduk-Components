@@ -23,6 +23,9 @@ nav {
   grid-area: nav;
   overflow-y: auto;
   overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   /* custom scrollbar */ }
   nav::-webkit-scrollbar {
     width: 20px; }
@@ -55,7 +58,13 @@ nav {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        width: 163px; }
+        width: 163px;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left; }
     nav .menu-item .item-icon, nav .menu-item .item-text {
       display: flex;
       align-items: center; }
