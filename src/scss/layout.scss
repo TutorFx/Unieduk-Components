@@ -180,8 +180,10 @@ nav {
 }
 
 section {
-	background: #ABABAB;
-	grid-area: section;    
+	background: #e0e2e7;
+	grid-area: section;   
+  padding: 1.2rem; 
+  overflow-y: scroll;
 }
 
 aside {
