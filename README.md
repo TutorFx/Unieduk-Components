@@ -24,6 +24,7 @@ Estrutura:
  ┃ ┣ 📜logo.svg
  ┃ ┗ 📜menu.js
  ┣ 📂components
+ ┃ ┣ 📜layout.js
  ┃ ┣ 📜select.js
  ┃ ┣ 📜selectNav.js
  ┃ ┗ 📜tabela.js
@@ -35,8 +36,9 @@ Estrutura:
  ┃ ┣ 📜selector.css
  ┃ ┣ 📜styles.css
  ┃ ┗ 📜tabela.css
- ┣ 📂layout (HTML)
+ ┣ 📂layout
  ┃ ┣ 📜comercial.html
+ ┃ ┣ 📜comercial2.html
  ┃ ┣ 📜layout.html
  ┃ ┣ 📜login.html
  ┃ ┗ 📜selector.html
