@@ -48,51 +48,18 @@
             </button>
           </div>
           <div class="tabs">
-            <div class="tab selected">
+            <div class="tab">
               Premissas
             </div>
-            <div class="tab">
+            <div class="tab selected">
               Despesas
             </div>
             <div class="tab">
               Investimento
             </div>
           </div>
-          <div class="cards">
-            <div class="card">
-              <div class="top-bar">
-                <span>total 2020</span>
-                <span>16 de ago - 26</span>
-              </div>
-              <div class="value">
-                <svg viewBox="0 0 56 18">
-                  <text x="0" y="15">458</text>
-                </svg>   
-              </div>
-            </div>
-            <div class="card">
-              <div class="top-bar">
-                <span>total 2020</span>
-                <span>16 de ago - 26</span>
-              </div>
-              <div class="value">
-                <svg viewBox="0 0 56 18">
-                  <text x="0" y="15">458</text>
-                </svg>
-              </div>
-            </div>
-            <div class="card">
-              <div class="top-bar">
-                <span>total 2020</span>
-                <span>16 de ago - 26</span>
-              </div>
-              <div class="value">
-                <svg viewBox="0 0 56 18">
-                  <text x="0" y="15">458</text>
-                </svg>
-              </div>
-            </div>
-          </div>
+
+          
   
           <div class="card--table">
             <div class="top-bar">
@@ -101,10 +68,10 @@
             </div>
             <div class="disabled-color">Quantidade de novos alunos estimada para 2023-01</div>
             <faj-selectnav :options="optionsNavOne" @selected="(e) => selectNav = e"></faj-selectnav>
-            {{selectNav}}
+            <!-- {{selectNav}} -->
             <faj-tabela :table="tabledata"></faj-tabela>
             <faj-selectnav :options="optionsNavOne" @selected="(e) => selectNav = e"></faj-selectnav>
-            {{selectNav}}
+            <!-- {{selectNav}} -->
             <faj-tabela :table="tabledata"></faj-tabela>
           </div>
         </layout>
