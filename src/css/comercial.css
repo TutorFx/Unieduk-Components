@@ -162,3 +162,19 @@ body {
       border: 1px solid #e5e7eb; }
       .card--table .top-bar a:hover {
         background: #e5e7eb; }
+
+.graph-e-orc {
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  grid-template-areas: 'graph orc';
+  gap: 1.5rem;
+  margin-bottom: 1.5rem; }
+  .graph-e-orc .graph, .graph-e-orc .orc {
+    border-radius: 8px;
+    box-shadow: 0px 10px 13px rgba(17, 38, 146, 0.05); }
+  .graph-e-orc .graph {
+    grid-area: graph;
+    background-color: #fff; }
+  .graph-e-orc .orc {
+    grid-area: orc;
+    background-color: #fff; }

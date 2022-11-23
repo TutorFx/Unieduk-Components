@@ -199,3 +199,25 @@ body {
     }
   }
 }
+
+// despesas
+
+.graph-e-orc{
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  grid-template-areas: 'graph orc';
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  .graph, .orc{
+    border-radius: 8px;
+    box-shadow: 0px 10px 13px rgba(17, 38, 146, 0.05);
+  }
+  .graph{
+    grid-area: graph;
+    background-color: #fff;
+  }
+  .orc{
+    grid-area: orc;
+    background-color: #fff;
+  }
+}
