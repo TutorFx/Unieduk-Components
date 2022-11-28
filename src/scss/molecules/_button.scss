@@ -1,0 +1,25 @@
+@mixin button {
+    display: flex;
+    border-radius: 8px;
+    padding: 6px 12px 6px 12px;
+    border: 1px solid #E5E7EB;
+
+    //styleName: Inter/small semibold;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.btn {
+    @include button;
+}
+
+.btn-block {
+    @include button;
+    display: block;
+    text-align: center;
+}

@@ -165,6 +165,32 @@ table {
   --color-gray-5: #e0e0e0;
   --color-gray-6: #f5f5f4; }
 
+.btn {
+  display: flex;
+  border-radius: 8px;
+  padding: 6px 12px 6px 12px;
+  border: 1px solid #E5E7EB;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left; }
+
+.btn-block {
+  display: flex;
+  border-radius: 8px;
+  padding: 6px 12px 6px 12px;
+  border: 1px solid #E5E7EB;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  display: block;
+  text-align: center; }
+
 div {
   font-family: Inter, sans-serif; }
 
